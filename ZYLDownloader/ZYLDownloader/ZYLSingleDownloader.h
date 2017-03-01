@@ -125,7 +125,7 @@ typedef NS_ENUM(NSUInteger, ZYLDownloaderState) {
 /**
  * 删除下载器前判断下载器的下载状态，根据不同的状态处理下载器
  */
-- (void)judgeDownloaderStateToHandel;
+- (void)judgeDownloaderStateToHandle;
 
 /**
  * 取消当前的下载线程

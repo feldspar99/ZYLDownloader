@@ -101,7 +101,7 @@ static dispatch_once_t onceToken2;
 + (void)destoryDownloader {
     
     for (ZYLSingleDownloader *downloader in _downloader.singleDownloaderArray) {
-        [downloader judgeDownloaderStateToHandel];
+        [downloader judgeDownloaderStateToHandle];
     }
     
     [_downloader.singleDownloaderArray removeAllObjects];
@@ -599,7 +599,7 @@ static dispatch_once_t onceToken2;
         //存在
         
         //判断下载器的下载状态，做出相应的处理
-        [downloaderModel judgeDownloaderStateToHandel];
+        [downloaderModel judgeDownloaderStateToHandle];
         
         //判断是否在数据库中
         if (downloaderModel.isExistInRealm == YES) {
@@ -693,7 +693,7 @@ static dispatch_once_t onceToken2;
 - (void)deleteAllDownloadersInfo {
     
 //    for (ZYLSingleDownloader *downloader in _singleDownloaderArray) {
-//        [downloader judgeDownloaderStateToHandel];
+//        [downloader judgeDownloaderStateToHandle];
 //    }
     __block NSMutableArray *urlArray = [[NSMutableArray alloc] init];
     [self.singleDownloaderArray enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(ZYLSingleDownloader*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
